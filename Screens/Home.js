@@ -12,7 +12,7 @@ import {
 import { StyleSheet, Image } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from '@expo/vector-icons'; 
-function Home() {
+function Home({ navigation }) {
   return (
     <NativeBaseProvider>
       <StatusBar bg="white" barStyle="black" />
@@ -131,6 +131,9 @@ function Home() {
           br="10px"
           bg="white"
           shadow="6"
+          onPress={() => {
+            navigation.navigate("Profile");
+            }}
         >
           <Text style={styles.buttontext}>Découvrir</Text>
         </Button>

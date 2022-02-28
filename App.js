@@ -7,6 +7,7 @@ import ProfileScreen from './Screens/Profile';
 import SearchScreen from './Screens/Search';
 import HebergementScreen from './Screens/Hebergement';
 
+
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -56,6 +57,9 @@ export default function App() {
             <MaterialCommunityIcons name="account-circle" color="black" size={26}/>
         ),
     }}/>
+
+    
+
     </Tab.Navigator>
     </NavigationContainer>
   );

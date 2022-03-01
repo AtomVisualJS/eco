@@ -12,6 +12,7 @@ import {
 import { StyleSheet, Image } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from '@expo/vector-icons'; 
+
 function Home({ navigation }) {
   return (
     <NativeBaseProvider>

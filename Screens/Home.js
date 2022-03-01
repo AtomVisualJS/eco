@@ -133,7 +133,7 @@ function Home({ navigation }) {
           bg="white"
           shadow="6"
           onPress={() => {
-            navigation.navigate("Profile");
+            navigation.navigate("Questionnaire");
             }}
         >
           <Text style={styles.buttontext}>Découvrir</Text>
@@ -191,5 +191,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
+
+function DetailsScreen({}) {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Details Screen</Text>
+    </View>
+  );
+}
+
 
 export default Home;

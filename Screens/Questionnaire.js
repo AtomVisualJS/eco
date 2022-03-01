@@ -1,12 +1,12 @@
-import { View, Text } from "native-base";
 
-function Questionnaire() {
+import { View, Text} from 'react-native';
+
+function Questionnaire (){
     return (
         <View>
-            <Text>szzzszszs</Text>
-        </View>
+            <Text >Questionnaire</Text>
+            </View>
     );
-
 }
 
 export default Questionnaire;

@@ -1,132 +1,187 @@
-import { View, Text, StyleSheet, Button, TextInput } from "react-native";
+import React from "react";
+import { View, Text, Image, ImageBackground } from "react-native";
+
+import HeaderBar from "../Views/HeaderBar";
 
 function Hebergement() {
   return (
-    <View
-      style={{
-        marginTop: 110,
-      }}
-    >
-      <TextInput
-        style={styles.input}
-        placeholder="useless placeholder"
-      ></TextInput>
-      <View
-        style={{
-          flexDirection: "row",
-        }}
+    <View>
+      <ImageBackground
+        source={require("../assets/bg.png")}
+        style={{ width: "100%", height: "100%" }}
       >
-        <View style={styles.containernav}>
-          <Text>Pour les enfants</Text>
-        </View>
-        <View style={styles.containernav}>
-          <Text>Hôtel des Arts</Text>
-        </View>
-        <View style={styles.containernav}>
-          <Text>Musée </Text>
-        </View>
-      </View>
-      <View
-        style={{
-          marginTop: 20,
-          marginLeft: 20,
-        }}
-      >
-        <Text
+          
+        <View
           style={{
-            fontSize: 25,
+            marginTop: 60,
+            alignItems: "center",
           }}
         >
-          Populaires
-        </Text>
-      </View>
-      <View
-        style={{
-          flexDirection: "row",
-        }}
-      >
-        <View style={styles.box}>
-          <View>
-            <Text>Hôtel des Arts</Text>
+          <View
+            style={{
+            marginTop: -100,
+              borderColor: "black",
+              borderWidth: 0.1,
+              width: 319,
+              height: 114,
+              borderRadius: 13,
+              marginTop: 0,
+              flexDirection: "row",
+              backgroundColor: "white",
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.15,
+            }}
+          >
+            <Image
+              source={require("../assets/hebergement/la_corniche.png")}
+              style={{
+                width: 150,
+                height: 100,
+                marginTop: 7,
+                marginLeft: 10,
+                borderRadius: 13,
+              }}
+            />
+            <View>
+              <Text
+                style={{
+                  marginTop: 25,
+                  marginLeft: 15,
+                  fontSize:14,
+                  fontWeight: "bold",
+                }}
+              >
+                Hotel La Corniche
+              </Text>
+              <Text
+                style={{
+                  marginTop: 0,
+                  marginLeft: 30,
+                  fontSize: 12,
+                }}
+              >
+                Indice de pollution
+              </Text>
+              
+            </View>
           </View>
-        </View>
-        <View style={styles.box}>
-          <View>
-            <Text>Hôtel des Arts</Text>
+          <View
+            style={{
+              borderColor: "black",
+              borderWidth: 0.1,
+              width: 319,
+              height: 114,
+              borderRadius: 13,
+              marginTop: 30,
+              flexDirection: "row",
+              backgroundColor: "white",
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.15,
+            }}
+          >
+           <Image
+              source={require("../assets/hebergement/chambre_hotes.png")}
+              style={{
+                width: 150,
+                height: 100,
+                marginTop: 7,
+                marginLeft: 10,
+                borderRadius: 13,
+              }}
+            />
+            <View>
+              <Text
+                style={{
+                  marginTop: 25,
+                  marginLeft: 25,
+                  fontSize: 16,
+                  fontWeight: "bold",
+                }}
+              >
+                Bus
+              </Text>
+              <Text
+                style={{
+                  marginTop: 0,
+                  marginLeft: 30,
+                  fontSize: 12,
+                }}
+              >
+                Indice de pollution
+              </Text>
+              
+            </View>
           </View>
-        </View>
-        <View style={styles.box}>
-          <View>
-            <Text>Hôtel des Arts</Text>
+          <View
+            style={{
+              borderColor: "black",
+              borderWidth: 0.1,
+              width: 319,
+              height: 114,
+              borderRadius: 13,
+              marginTop: 30,
+              flexDirection: "row",
+              backgroundColor: "white",
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.15,
+            }}
+          >
+            <Image
+              source={require("../assets/hebergement/Okko_Hotel.png")}
+              style={{
+                width: 150,
+                height: 100,
+                marginTop: 7,
+                marginLeft: 10,
+                borderRadius: 13,
+              }}
+            />
+            <View>
+              <Text
+                style={{
+                  marginTop: 25,
+                  marginLeft: 25,
+                  fontSize: 16,
+                  fontWeight: "bold",
+                }}
+              >
+                Bateau
+              </Text>
+              <Text
+                style={{
+                  marginTop: 0,
+                  marginLeft: 30,
+                  fontSize: 12,
+                }}
+              >
+                Indice de pollution
+              </Text>
+              <Image
+                source={require("../assets/transport/feuilles/3F.png")}
+                style={{
+                  width: "95%",
+                  marginTop: 10,
+                  marginLeft: 20,
+                }}
+              />
+            </View>
           </View>
+         
         </View>
-      </View>
-      <View
-        style={{
-          marginTop: 40,
-          marginLeft: 20,
-        }}
-      >
-        <Text
-          style={{
-            fontSize: 25,
-          }}
-        >
-          Activités
-        </Text>
-        <View style={styles.listbox}>
-          <Text>Hôtel des Arts</Text>
-        </View>
-      </View>
+      </ImageBackground>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    borderColor: "black",
-    borderWidth: 1,
-    borderRadius: 20,
-    width: "40%",
-    marginLeft: 20,
-    marginBottom: 20,
-    paddingLeft: 10,
-  },
-
-  containernav: {
-    borderWidth: 1,
-    borderColor: "black",
-    width: "33%",
-    height: 33,
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    marginRight: 10,
-  },
-
-  box: {
-    borderWidth: 1,
-    borderColor: "black",
-    width: "33%",
-    borderTopRightRadius: 10,
-    borderTopLeftRadius: 10,
-    height: 100,
-    marginTop: 20,
-    marginLeft: 20,
-    alignItems: "center",
-  },
-
-  listbox: {
-    borderWidth: 1,
-    borderColor: "black",
-    width: "80%",
-    alignItems: "center",
-    marginLeft: "10%",
-    marginTop: 20,
-    borderRadius: 10,
-    height: 120,
-  },
-});
-
 export default Hebergement;

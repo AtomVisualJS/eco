@@ -1,11 +1,13 @@
+
+
 import React from "react";
 import { HStack, IconButton, Icon, Box, StatusBar, NativeBaseProvider } from "native-base";
-import { MaterialIcons } from "@expo/vector-icons";
-import { Text, Image } from "native-base";
+import { Image } from "native-base";
+import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-function HeaderBar() {
+
+function HeaderBar({ navigation }) {
   return (
-   
     <NativeBaseProvider>
       <StatusBar bg="white" barStyle="black" />
       <Box safeAreaTop bg="white" w="100%" />
@@ -21,8 +23,10 @@ function HeaderBar() {
         <HStack alignItems="center" pb="0">
           <IconButton
             icon={
-              <Icon size="sm" as={MaterialIcons} name="menu" color="black" />
+              <Ionicons name="home" size={22} color="black" />
+              
             }
+            onPress={() => navigation.navigate("Home")}
           />
 
           <Image source={require("../assets/logo.png")} 

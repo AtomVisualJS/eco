@@ -18,6 +18,7 @@ export default function Maps() {
             longitudeDelta: 0.0421,
             
             }}>
+              /// Hotel des arts
             <Marker
             coordinate={{
                latitude: 43.12534,
@@ -27,9 +28,9 @@ export default function Maps() {
             title="Hôtel des arts"
             description="Lieu culturel national et de diffusion dans l’art et la culture"
             />
+            /// Others 
             <Marker
             coordinate={{
-
                 latitude: 43.126221,
                 longitude: 5.930812,
             }}

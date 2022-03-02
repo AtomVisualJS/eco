@@ -125,7 +125,7 @@ function Hebergement() {
               borderColor: "black",
               borderWidth: 0.1,
               width: 319,
-              height: 114,
+              height: 150,
               borderRadius: 13,
               marginTop: 30,
               flexDirection: "row",
@@ -151,7 +151,7 @@ function Hebergement() {
             <View>
               <Text
                 style={{
-                  marginTop: 25,
+                  marginTop: 10,
                   marginLeft: 25,
                   fontSize: 16,
                   fontWeight: "bold",
@@ -162,20 +162,17 @@ function Hebergement() {
               <Text
                 style={{
                   marginTop: 0,
-                  marginLeft: 30,
-                  fontSize: 12,
+                  marginLeft: 10,
+                  fontSize: 9,
+                  width: 150,
                 }}
               >
-                Indice de pollution
-              </Text>
-              <Image
-                source={require("../assets/transport/feuilles/3F.png")}
-                style={{
-                  width: "95%",
-                  marginTop: 10,
-                  marginLeft: 20,
-                }}
-              />
+                Cet hôtel moderne est situé sur la place de 
+la liberté, lieu stratégique pour découvrir 
+tout Toulon. 
+{"\n"}</Text>
+              
+
             </View>
           </View>
          

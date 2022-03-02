@@ -21,13 +21,7 @@ function HeaderBar({ navigation }) {
         h="60px"
         mt={-2}>
         <HStack alignItems="center" pb="0">
-          <IconButton
-            icon={
-              <Ionicons name="home" size={22} color="black" />
-              
-            }
-            onPress={() => navigation.navigate("Home")}
-          />
+
 
           <Image source={require("../assets/logo.png")} 
             style={{

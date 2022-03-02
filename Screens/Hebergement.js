@@ -163,7 +163,7 @@ function Hebergement() {
                 style={{
                   marginTop: 0,
                   marginLeft: 10,
-                  fontSize: 9,
+                  fontSize: 7,
                   width: 150,
                 }}
               >

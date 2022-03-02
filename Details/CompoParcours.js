@@ -8,9 +8,17 @@ import {
   StyleSheet,
   Button,
   Alert,
+  ImageBackground,
 } from "react-native";
 function CompoParcours() {
   return (
+    <ImageBackground source={require("../assets/bg.png")}
+      style={{
+         width:"100%",
+         height:"100%"
+      }}
+    
+    > 
     <View
       style={{
         alignItems: "center",
@@ -25,11 +33,11 @@ function CompoParcours() {
           color: "black",
         }}
       >
-        Combien de personnes êtes vous
+        Combien de personnes êtes vous ?
       </Text>
       <TextInput
         style={styles.input}
-        placeholder="useless placeholder"
+        placeholder="Entrez le nombre de personnes ..."
         keyboardType="numeric"
       />
 
@@ -72,6 +80,8 @@ function CompoParcours() {
         />
       </View>
     </View>
+    </ImageBackground>
+   
   );
 }
 

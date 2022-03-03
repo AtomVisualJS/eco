@@ -1,9 +1,16 @@
-import { Text, Button, Image, View, ImageBackground, TextInput } from "react-native";
+import {
+  Text,
+  Button,
+  Image,
+  TouchableOpacity,
+  View,
+  ImageBackground,
+  TextInput,
+  StyleSheet,
+} from "react-native";
 
 
-
-
-function Profile( { navigation } ) {
+function Profile({ navigation }) {
   return (
     <View>
       <ImageBackground
@@ -11,77 +18,121 @@ function Profile( { navigation } ) {
         style={{ width: "100%", height: "100%" }}
       >
         
-        
-          <Text>Profile</Text>
-          <View
+        <View
           style={{
-            marginTop: 500,
-            backgroundColor:"white",
+            marginTop: 240,
+            backgroundColor: "white",
             alignItems: "center",
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
           }}
         >
-          <Image 
+          <Image
             source={require("../assets/logo.png")}
             style={{
               width: 200,
               height: 100,
-              marginTop: 10,
+              marginTop: 20,
             }}
-            />
+          />
           <View>
-            <TextInput 
-              placeholder="email"
-              />
-            <TextInput
-              placeholder="password"
-              />
+            <Text
+              style={{
+                fontSize: 20,
+                textAlign: "center",
+                fontWeight: "bold",
+                marginTop: 5,
+                marginBottom: 15,
+              }}
+            >L’application qui rend vos 
+            {'\n'}
+            vacances écologiques !
+            </Text>
+            <View style={styles.controller}>
+            <TextInput style={styles.input} placeholder="Adresse email ✉️" />
+            <TextInput style={styles.input} placeholder="Mot de passe" />
+            <TouchableOpacity
+            style={
+              {
+                marginTop: -10,
+                marginBottom: 10,
+              }
+            }
+              ><Text
+                style={{
+                  fontSize: 12,
+                }}
+              
+              >
+                Mot de passe oublié ?
+              </Text>
+            </TouchableOpacity>
+            </View>
           </View>
-          <View
-            style={{
-              borderColor: "black",
-              borderWidth: 1,
-              width: "33%",
-              marginLeft: "33%",
-              borderRadius: 16,
-              
-              
-              
-            }}
-          >
-          <Button
-            
-            title="S'Inscrire"
-            onPress={() => {
-              navigation.navigate("S'Inscrire");
-            }}
-          >
-
           
-            
-          </Button>
-          </View>
-          <Button
-            title="Connexion"
-            onPress={() => {
-              alert("Connexion");
-            }}
-          >
-            
-          </Button>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Home")}
+              style={styles.button}
+            >
+              <Text style={styles.buttonText}>Connexion</Text>
+            </TouchableOpacity>
 
-         
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Register")}
+              style={styles.button2
+              }
+              
+            >
+              <Text style={styles.buttonText}>S'inscrire</Text>
+            </TouchableOpacity>
 
-
-        </View>
-        <View>
-
-        </View>
+            </View>
+          
+          
+        
+        <View></View>
       </ImageBackground>
     </View>
   );
 }
 
+const styles = StyleSheet.create({
+  controller: {
+    marginTop: 10,
+  },
+  input: {
+    marginBottom: 20,
+    borderBottomColor: "grey",
+    borderBottomWidth: 1,
+  },
 
-export default Profile
+  button : {
+    backgroundColor: "green",
+    marginTop: 20,
+    marginBottom: 10,
+    borderRadius: 30,
+    padding: 10,
+    width: "30%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  button2 : {
+    backgroundColor: "black",
+    marginTop: 5,
+    marginBottom: 30,
+    borderRadius: 30,
+    padding: 10,
+    width: "30%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  buttonText: {
+    color: "white",
+  },
+
+});
 
 
+export default Profile;

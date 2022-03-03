@@ -1,46 +1,120 @@
+import {
+  Text,
+  Button,
+  Image,
+  TouchableOpacity,
+  View,
+  ImageBackground,
+  TextInput,
+  StyleSheet,
+} from "react-native";
 
-import { View, Text, Button, Image, ImageBackground, TextInput } from "react-native";
 
-function Register () {
-    
-
-    return (
-        <View>
-            <Text>Inscription</Text>
-            <View>
-            <TextInput
-                placeholder="Name"
+function Register() {
+  return (
+    <View>
+      <ImageBackground
+        source={require("../assets/bgplan.png")}
+        style={{ width: "100%", height: "100%" }}
+      >
+        
+        <View
+          style={{
+            marginTop: 200,
+            backgroundColor: "white",
+            alignItems: "center",
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
+          }}
+        >
+          <Image
+            source={require("../assets/logo.png")}
+            style={{
+              width: 200,
+              height: 100,
+              marginTop: 20,
+            }}
+          />
+          <View>
+            <Text
+              style={{
+                fontSize: 25,
+                textAlign: "center",
+                fontWeight: "bold",
+                marginTop: 5,
+                marginBottom: 15,
                 
-            />
-            <TextInput
-                placeholder="Email"
-                
-            />
-            <TextInput
-                placeholder="Password"
-               
-            />
-            <TextInput
-                placeholder="Confirm Password"
-                
-            />
-            <Button
-                title="S'Inscrire"
-                name="S'inscrire"
-                onPress={() => {
-                    alert("Register");
-                }}
-            />
-</View>
-            <View>
-                
-                
-               
+              }}
+            >
+              Bievenue  ! 
+            </Text>
+            <View style={styles.controller}>
+            <TextInput style={styles.input} placeholder="Nom et Prénom" />
+            <TextInput style={styles.input} placeholder="Adresse Email" />
+            <TextInput style={styles.input} placeholder="Numéro de Téléphone" />
+            <TextInput style={styles.input} placeholder="Identifiant" />
+            <TextInput style={styles.input} placeholder="Mot de passe" />
+            <TextInput style={styles.input} placeholder="Confirmer Mot de passe" />
             </View>
-        </View>
-    )
+          </View>
+          
+           
 
+            <TouchableOpacity
+              style={styles.button2
+              }
+              
+            >
+              <Text style={styles.buttonText}>S'inscrire</Text>
+            </TouchableOpacity>
+
+            </View>
+          
+          
+        
+        <View></View>
+      </ImageBackground>
+    </View>
+  );
 }
 
+const styles = StyleSheet.create({
+  controller: {
+    marginTop: 10,
+  },
+  input: {
+    marginBottom: 20,
+    borderBottomColor: "grey",
+    borderBottomWidth: 1,
+  },
 
-export default Register
+  button : {
+    backgroundColor: "green",
+    marginTop: 20,
+    marginBottom: 10,
+    borderRadius: 30,
+    padding: 10,
+    width: "30%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  button2 : {
+    backgroundColor: "black",
+    marginTop: 5,
+    marginBottom: 35,
+    borderRadius: 30,
+    padding: 10,
+    width: "30%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  buttonText: {
+    color: "white",
+  },
+
+});
+
+
+export default Register;

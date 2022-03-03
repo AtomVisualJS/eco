@@ -1,43 +1,50 @@
+import { View, StyleSheet, TouchableOpacity } from "react-native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 
-import React from "react";
-import { HStack, IconButton, Icon, Box, StatusBar, NativeBaseProvider } from "native-base";
-import { Image } from "native-base";
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
 
-function HeaderBar({ navigation }) {
+function HeaderBar() {
   return (
-    <NativeBaseProvider>
-      <StatusBar bg="white" barStyle="black" />
-      <Box safeAreaTop bg="white" w="100%" />
-      <HStack
-        bg="white"
-        px={2}
-        py="3"
-        justifyContent="space-between"
-        alignItems="center"
-        w="100%"
-        h="60px"
-        mt={-2}>
-        <HStack alignItems="center" pb="0">
-
-
-          <Image source={require("../assets/logo.png")} 
-            style={{
-                width: 100,
-                height: "100%",
-                marginTop: 10,
-            }}
-            alt="logo"
-          />
-        </HStack>
-        <AntDesign name="user" size={24} color="black" />
-        
-      </HStack>
-      </NativeBaseProvider>
-    
+    <View style={styles.headerbox}>
+      <View style={styles.headercontent}>
+        <TouchableOpacity>
+          <MaterialCommunityIcons
+            name="home"
+            size={30}
+            style={styles.homeicon}
+          ></MaterialCommunityIcons>
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <MaterialCommunityIcons
+                name="account-circle"
+                color="black"
+                size={30}
+                style={styles.usericon}
+              />
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }
 
 export default HeaderBar;
+
+const styles = StyleSheet.create({
+  headerbox: {
+    backgroundColor: "white",
+    height: 90,
+  },
+
+  headercontent: {
+    marginTop: 50,
+    flexDirection: "row",
+  },
+
+  homeicon: {
+    marginLeft: "17%",
+  },
+
+  usericon: {
+    marginLeft: "77%",
+  },
+});

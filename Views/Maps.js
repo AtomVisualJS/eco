@@ -48,7 +48,7 @@ export default function Maps() {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 100,
+        marginTop: 0,
         alignItems: 'center',
     },
   

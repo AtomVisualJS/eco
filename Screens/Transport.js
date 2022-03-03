@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, Image, ImageBackground } from "react-native";
 
-import HeaderBar from "../Views/HeaderBar";
-
 function Transport() {
   return (
     <View>

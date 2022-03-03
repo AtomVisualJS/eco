@@ -1,7 +1,7 @@
 import * as React from 'react';
 import MapView, {Marker} from 'react-native-maps';
 import { StyleSheet, View, Dimensions } from 'react-native';
-import HeaderBar from './HeaderBar';
+
 
 
 

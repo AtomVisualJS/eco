@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// By AtomVisualJS (Ecoliday Project - Réaco 2022 - React Native)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
@@ -21,12 +22,14 @@ import ProfileScreen from "./Screens/Profile";
 import SearchScreen from "./Screens/Search";
 import HebergementScreen from "./Screens/Hebergement";
 
-/// Logs Router
-import RegisterScreen from "./logs/Register";
-
 /// Details Routes
 import CompoParcoursScreen from "./Details/CompoParcours";
 import ParcoursEvenement from "./Details/ParcoursEvenement";
+
+
+/// Logs Routes
+import RegisterScreen from "./logs/Register";
+
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -141,11 +144,24 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         labeled={false}
-        barStyle={{ backgroundColor: "#fff" }}
+        barStyle={{ backgroundColor: "#fff", borderTopColor:"black", borderTopWidth:0.1 }}
         activeColor="white"
       >
+                <Tab.Screen
+          name="ProfileTab"
+          component={ProfileStackScreen}
+          options={{
+            tabBarIcon: () => (
+              <MaterialCommunityIcons
+                name="account-circle"
+                color="black"
+                size={26}
+              />
+            ),
+          }}
+        />
         <Tab.Screen
-          name="Home"
+          name="HomeTab"
           component={HomeStackScreen}
           options={{
             tabBarIcon: () => (
@@ -163,7 +179,7 @@ export default function App() {
           }}
         />
         <Tab.Screen
-          name="Notification"
+          name="TransportTab"
           component={TransportStackScreen}
           options={{
             tabBarIcon: () => (
@@ -172,7 +188,7 @@ export default function App() {
           }}
         />
         <Tab.Screen
-          name="Hebergement"
+          name="HebergementTab"
           component={HebergementStackScreen}
           options={{
             tabBarIcon: () => (
@@ -180,19 +196,7 @@ export default function App() {
             ),
           }}
         />
-        <Tab.Screen
-          name="Profile"
-          component={ProfileStackScreen}
-          options={{
-            tabBarIcon: () => (
-              <MaterialCommunityIcons
-                name="account-circle"
-                color="black"
-                size={26}
-              />
-            ),
-          }}
-        />
+  
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -1,8 +1,6 @@
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-
-
 function HeaderBar() {
   return (
     <View style={styles.headerbox}>
@@ -15,12 +13,12 @@ function HeaderBar() {
           ></MaterialCommunityIcons>
         </TouchableOpacity>
         <TouchableOpacity>
-        <MaterialCommunityIcons
-                name="account-circle"
-                color="black"
-                size={30}
-                style={styles.usericon}
-              />
+          <MaterialCommunityIcons
+            name="account-circle"
+            color="black"
+            size={30}
+            style={styles.usericon}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -31,7 +29,7 @@ export default HeaderBar;
 
 const styles = StyleSheet.create({
   headerbox: {
-    backgroundColor: "white",
+    backgroundColor: "rgba(249, 252, 252, 1)",
     height: 90,
   },
 

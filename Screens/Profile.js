@@ -1,22 +1,87 @@
-import { View, Text, ImageBackground } from "react-native";
+import { Text, Button, Image, View, ImageBackground, TextInput } from "react-native";
 
-import HeaderBar from "../Views/HeaderBar";
 
-export default function Profile() {
+
+
+function Profile( { navigation } ) {
   return (
     <View>
-      <ImageBackground source={require("../assets/bg.png")} style={{ width: "100%", height: "100%"}}>
-      <HeaderBar />
-      <View
-        style={{
-          marginTop: 100,
-        }}
+      <ImageBackground
+        source={require("../assets/bgplan.png")}
+        style={{ width: "100%", height: "100%" }}
       >
-        <Text
         
-        >Profile</Text>
-      </View>
+        
+          <Text>Profile</Text>
+          <View
+          style={{
+            marginTop: 500,
+            backgroundColor:"white",
+            alignItems: "center",
+          }}
+        >
+          <Image 
+            source={require("../assets/logo.png")}
+            style={{
+              width: 200,
+              height: 100,
+              marginTop: 10,
+            }}
+            />
+          <View>
+            <TextInput 
+              placeholder="email"
+              />
+            <TextInput
+              placeholder="password"
+              />
+          </View>
+          <View
+            style={{
+              borderColor: "black",
+              borderWidth: 1,
+              width: "33%",
+              marginLeft: "33%",
+              borderRadius: 16,
+              
+              
+              
+            }}
+          >
+          <Button
+            
+            title="S'Inscrire"
+            onPress={() => {
+              navigation.navigate("S'Inscrire");
+            }}
+          >
+
+          
+            
+          </Button>
+          </View>
+          <Button
+            title="Connexion"
+            onPress={() => {
+              alert("Connexion");
+            }}
+          >
+            
+          </Button>
+
+         
+
+
+        </View>
+        <View>
+
+        </View>
       </ImageBackground>
     </View>
   );
 }
+
+
+export default Profile
+
+

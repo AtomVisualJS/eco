@@ -20,41 +20,56 @@ import SearchScreen from "./Screens/Search";
 import HebergementScreen from "./Screens/Hebergement";
 
 
+
+/// Logs Router
+import RegisterScreen from "./logs/Register";
+
+
 /// Details Routes
 import CompoParcoursScreen from "./Details/CompoParcours";
 import ParcoursEvenement from "./Details/ParcoursEvenement";
 
 
 const Tab = createMaterialBottomTabNavigator();
-const HomeStack = createNativeStackNavigator();
-const TransportStack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
+
 
 
 /// Home Router
 const HomeStackScreen = () => {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={HomeScreen} />
-      <HomeStack.Screen name="Composez votre Parcours" component={CompoParcoursScreen} />
-      <HomeStack.Screen name="Parcours événementiel" component={ParcoursEvenement} />
-    </HomeStack.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Composez votre Parcours" component={CompoParcoursScreen} />
+      <Stack.Screen name="Parcours événementiel" component={ParcoursEvenement} />
+    </Stack.Navigator>
   );
 }
 
 /// Transport Router
 const TransportStackScreen = () => {
   return (
-    <TransportStack.Navigator>
-      <TransportStack.Screen name="Transport" component={TransportScreen} />
-    </TransportStack.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen name="Transport" component={TransportScreen} />
+    </Stack.Navigator>
   );
 }
 
 const HebergementStackScreen = () => {
   return (
-    <TransportStack.Navigator>
-      <TransportStack.Screen name="Hebergement" component={HebergementScreen} />
-    </TransportStack.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen name="Hebergement" component={HebergementScreen} />
+    </Stack.Navigator>
+  );
+}
+
+const ProfileStackScreen = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="S'Inscrire" component={RegisterScreen} />
+      <Stack.Screen name="Connexion" component={RegisterScreen} />
+    </Stack.Navigator>
   );
 }
 
@@ -105,7 +120,7 @@ export default function App() {
         />
         <Tab.Screen
           name="Profile"
-          component={ProfileScreen} 
+          component={ProfileStackScreen} 
           options={{
             tabBarIcon: () => (
               <MaterialCommunityIcons

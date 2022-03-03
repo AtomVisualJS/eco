@@ -33,7 +33,7 @@ function Transport() {
                 width: 0,
                 height: 2,
               },
-              shadowOpacity: 0.15,
+              shadowOpacity: 0,
             }}
           >
             <Image
@@ -90,7 +90,7 @@ function Transport() {
                 width: 0,
                 height: 2,
               },
-              shadowOpacity: 0.15,
+              shadowOpacity: 0,
             }}
           >
             <Image
@@ -147,7 +147,7 @@ function Transport() {
                 width: 0,
                 height: 2,
               },
-              shadowOpacity: 0.15,
+              shadowOpacity: 0,
             }}
           >
             <Image
@@ -204,7 +204,7 @@ function Transport() {
                 width: 0,
                 height: 2,
               },
-              shadowOpacity: 0.15,
+              shadowOpacity: 0,
             }}
           >
             <Image

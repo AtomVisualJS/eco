@@ -45,10 +45,19 @@ function Home({ navigation }) {
               borderRadius="16px"
               shadow="6"
               style={{
+                height:50,
                 borderColor: "black",
                 flexDirection: "row",
               }}
             >
+              <Image source={require("../assets/home/nature.png")} 
+              style={{
+                marginLeft: 0,
+                marginTop: -5,
+               
+                marginRight: 5,
+              }}
+              />
               <Text>Nature et sportifs </Text>
             </Box>
             <Box
@@ -60,9 +69,19 @@ function Home({ navigation }) {
               borderRadius="16px"
               shadow="6"
               style={{
+  
+                height:50,
                 borderColor: "black",
+                flexDirection: "row",
               }}
             >
+               <Image source={require("../assets/home/nature.png")} 
+                style={{
+                  marginLeft: 0,
+                  marginTop: -5,
+                  marginRight: 5,
+                }}
+              />
               <Text>Culturel </Text>
             </Box>
           </View>

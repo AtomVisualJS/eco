@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// By AtomVisualJS (Ecoliday Project - Réaco 2022 - React Native)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-import { View, StyleSheet, ImageBackground } from "react-native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -9,7 +9,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 
 /// Header Bar
 import HeaderBar from "./Views/HeaderBar";
@@ -198,15 +198,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  headerbox: {
-    backgroundColor: "white",
-    height: 80,
-  },
 
-  headercontent: {
-    marginTop: 50,
-    marginLeft: 30,
-    flexDirection: "row",
-  },
-});

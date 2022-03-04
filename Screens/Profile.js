@@ -43,6 +43,7 @@ function Profile({ navigation }) {
                 fontWeight: "bold",
                 marginTop: 5,
                 marginBottom: 15,
+                fontFamily: "Avenir",
               }}
             >L’application qui rend vos 
             {'\n'}
@@ -61,6 +62,9 @@ function Profile({ navigation }) {
               ><Text
                 style={{
                   fontSize: 12,
+                  font:'italic',
+                  fontStyle : 'italic',
+                  fontFamily: "Avenir Next",
                 }}
               
               >
@@ -115,9 +119,11 @@ const styles = StyleSheet.create({
     width: "30%",
     alignItems: "center",
     justifyContent: "center",
+    fontFamily: "Avenir",
   },
 
   button2 : {
+    fontFamily: "Avenir",
     backgroundColor: "black",
     marginTop: 5,
     marginBottom: 30,

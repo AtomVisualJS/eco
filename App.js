@@ -29,6 +29,7 @@ import ParcoursEvenement from "./Details/ParcoursEvenement";
 
 /// Logs Routes
 import RegisterScreen from "./logs/Register";
+import LocationScreen from "./geolocalisation/location";
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -127,13 +128,17 @@ const ProfileStackScreen = () => {
       />
       <Stack.Screen
         name="Connexion"
-        component={RegisterScreen}
+        component={ProfileScreen}
         options={{
           header() {
             return <HeaderBar />;
           },
         }}
       />
+   
+
+  
+   
     </Stack.Navigator>
   );
 };

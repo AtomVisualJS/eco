@@ -1,13 +1,13 @@
-import React from "react";
-import { View, Text } from "react-native";
-import HeaderBar from "../Views/HeaderBar";
-import Maps from "../Views/Maps";
-function Search() {
-  return (
+
+import { View, Text } from 'react-native';
+import Maps from '../Views/Maps';
+
+function Location () {
+  return(
     <View>
-      <HeaderBar />
       <Maps />
     </View>
-  );
+  )
 }
-export default Search;
+
+export default Location;

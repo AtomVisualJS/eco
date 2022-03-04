@@ -10,7 +10,7 @@ import {
 } from "react-native";
 
 
-function Register() {
+function Register({ navigation }) {
   return (
     <View>
       <ImageBackground
@@ -61,11 +61,12 @@ function Register() {
            
 
             <TouchableOpacity
-              style={styles.button2
-              }
+              style={styles.button2}
               
             >
-              <Text style={styles.buttonText}>S'inscrire</Text>
+              <Text style={styles.buttonText}
+              
+              >S'inscrire</Text>
             </TouchableOpacity>
 
             </View>
